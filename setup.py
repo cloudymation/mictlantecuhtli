@@ -23,7 +23,7 @@ short_description = 'This is a python module to provide a multi-cloud terraform 
 
 setup(
     name=module_name,
-    version='0.10.1',
+    version='0.0.1',
     author='Collisio Adolebitque',
     author_email='collisio@net-devops.com',
     url='https://github.com/cloudymation/mictlantecuhtli',
@@ -38,7 +38,7 @@ setup(
     install_requires=dependencies,
     entry_points={
         "console_scripts": [
-            "mictlantecuhtli=mictl.__main__:main"
+            "mictl=mictl.__main__:main"
         ]
     },
     classifiers=[
