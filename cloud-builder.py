@@ -7,18 +7,22 @@ Mictlantecuhtli: A Multi-Cloud Global Probe Mesh Creator.
 @author: Collisio-Adolebitque
 """
 
-from mictl import *
+import mictl
 
 
 def main():
     """
-    python3 cloud-builder.py aws serverless http get www.google.com
-    python3 cloud-builder.py aws serverless https post www.test.com
-    python3 cloud-builder.py aws serverless dns www.google.com
+    <PYTHON> <SCRIPT_NAME> <FUNCTION> <CSP> <LOCATION> <TYPE> <TARGET>
+    python3 cloud-builder.py serverless aws us-east-2a http get www.amazon.com
+    python3 cloud-builder.py serverless aws -all-eu https post www.test.com
+    python3 cloud-builder.py serverless aws ireland dns www.google.com
+    python3 cloud-builder.py serverless gcp http get www.google.com
+    python3 cloud-builder.py serverless azure westeurope http get www.microsoft.com
     :return: None
     """
-    build_cloud = __main__.CommandParser()
-    print(build_cloud.run('python3 cloud-builder.py aws serverless http www.google.com'))
+    command = 'python3 cloud-builder.py serverless aws http get www.google.com'
+    build_cloud = mictl.CommandParser(command)
+    print(build_cloud.run())
 
 
 if __name__ == '__main__':
