@@ -9,11 +9,11 @@ Mictlantecuhtli: A Multi-Cloud Global Probe Mesh Creator.
 
 
 class CommandParser:
-    def __init__(self):
-        pass
+    def __init__(self, command_string=''):
+        self.command = command_string
 
-    def run(self, command_string=''):
-        return command_string
+    def run(self):
+        return self.command
 
 
 class Terraform:
